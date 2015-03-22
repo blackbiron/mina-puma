@@ -6,7 +6,7 @@ namespace :puma do
 
   set_default :puma_role,      -> { user }
   set_default :puma_env,       -> { fetch(:rails_env, 'production') }
-  set_default :puma_config,    -> { "#{deploy_to}/#{shared_path}/config/puma.rb" }
+  set_default :puma_config,    -> { "#{deploy_to}/#{current_path}/config/puma.rb" }
   set_default :puma_socket,    -> { "#{deploy_to}/#{shared_path}/tmp/sockets/puma.sock" }
   set_default :puma_state,     -> { "#{deploy_to}/#{shared_path}/tmp/sockets/puma.state" }
   set_default :puma_pid,       -> { "#{deploy_to}/#{shared_path}/tmp/pids/puma.pid" }
